@@ -196,7 +196,112 @@ Operator Precedence
 // console.log(Math.max(1 , 2 , 3));
 // console.log(Math.min(1 , 2 , 3));
 
+// let RandomNum = Math.random()*6;  //*6 To Have Random Values Only Btw 0 To (6 --> (Exclusive))
+// console.log(RandomNum);
 
+// const min = 50;
+// const max = 100;
+
+// let RandomNum = Math.floor(Math.random()* (max-min)) + min;  
+// console.log(RandomNum);
+
+//Random Number Generator
+
+// const myButton = document.getElementById("myButton");
+// const myLabel1 = document.getElementById("myLabel1");
+// const myLabel2 = document.getElementById("myLabel2");
+// const myLabel3 = document.getElementById("myLabel3");
+// const min = 1;
+// const max = 7;
+// let Random1;
+// let Random2;
+// let Random3;
+// myButton.onclick = function(){
+//    Random1 = Math.floor(Math.random() * max)+min;
+//    Random2 = Math.floor(Math.random() * max)+min;
+//    Random3 = Math.floor(Math.random() * max)+min;
+//    myLabel1.textContent = Random1;
+//    myLabel2.textContent = Random2;
+//    myLabel3.textContent = Random3;
+// }
+
+//Random Number Generator
+
+// let Age = 25;
+
+// if(Age>=18){
+//    console.log("You Are Old Enough To Enter This Site");
+// }else{
+//    console.log("Dont Enter...!!")
+// }
+
+// let isStudent = false;
+// if(isStudent){
+//    console.log("You Are A Student");
+// }else{
+//    console.log("You Are Not An Student");  //Runs
+// }
+
+// const myText = document.getElementById("myText");
+// const mySubmit = document.getElementById("mySubmit");
+// const resultElement = document.getElementById("resultElement");
+
+//1 let Age;
+// mySubmit.onclick = function(){
+//    Age = myText.value;
+//    Age = Number(Age);  //Coz Default It Is String
+//    if(Age > 100){
+//       resultElement.textContent = "You Are Too Old To Enter This Website";
+//    }
+//    else if(Age <= 0){
+//       resultElement.textContent = "Your Age Cannot Be in Negative Or Zerooo";
+//    }
+//    //Add How Many Conditions You Want 
+//    else{
+//       resultElement.textContent = "Vanakam Sir Eyyyy";
+//    }
+// 1}
+
+//Checked Property In JavaScript --> Checks Whether A HTMl TextBox or RadioButton Is Checked
+
+
+// const myCheckbox = document.getElementById("myCheckbox");
+
+// const myRadio1 = document.getElementById("myRadio1");
+// const myRadio2 = document.getElementById("myRadio2");
+// const myRadio3 = document.getElementById("myRadio3");
+
+// const ForCheckBox = document.getElementById("ForCheckBox");
+// const ForRadioBtn = document.getElementById("ForRadioBtn");
+
+// const mySubmit = document.getElementById("mySubmit");
+
+// mySubmit.onclick = function(){
+
+// if(myCheckbox.checked){
+//    ForCheckBox.textContent = `You Have Subscribed`;
+// }else{
+//    ForCheckBox.textContent = `Do Subscribe For Advanced Access`;
+// }
+
+// if(myRadio1.checked){
+//    ForRadioBtn.textContent = `You Are Going To Pay Via PayPal`;
+// }else if(myRadio2.checked){
+//    ForRadioBtn.textContent = `You Are Going To Pay Via CreditCard`;
+// }
+// else if(myRadio3.checked){
+//    ForRadioBtn.textContent = `You Are Going To Pay Via GooglePay`;
+// }
+
+// }
+
+
+//Checked Property In JavaScript
+
+//Ternary Operator --> (?:)
+// let Age = 21;
+// let Check = Age >= 18 ? "You Are An adult" : "You Are Not Adult";
+// console.log(Check);
 
 
 
