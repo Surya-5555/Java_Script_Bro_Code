@@ -303,6 +303,130 @@ Operator Precedence
 // let Check = Age >= 18 ? "You Are An adult" : "You Are Not Adult";
 // console.log(Check);
 
+//Switch Case
+// let Age = 17;
+// switch(Age){
+//    case 17 :
+//       console.log("First Case");
+//       break;
+//       default:
+//          console.log("Defaut Case");
+//          break;
+// }
 
+// let Mark = 10;
+// let Grade;
+// switch(true)
+// {
+//    case Mark>=90 :
+//       Grade = "A";
+//       break;
+//       case Mark>80 :
+//       Grade = "B";
+//       break;
+//       case Mark>70 :
+//       Grade = "C";
+//       break;
+//       default:
+//       Grade = "F";
+//       break   
+//       }
+// console.log(Mark,Grade);
 
+//--- Some String Methods --- //
+//charAt() --> 1
+// let UserName = "Surya";
+// console.log(UserName.charAt(5));  //First Character In A String For Normal By Index & <empty string> --> If (Not Accessible Index)
+
+// indexof() --> 2
+// let UserName = "Surya";
+// console.log(UserName.indexOf(`a`)); //Index of The Specified character If Not Availble Output --> -1
+
+// lastIndexOf() --> 3
+// let UserName = "Surya";
+// console.log(UserName.lastIndexOf(``)); //Same As Normal Indexof() & Nothing Inside Like (``) --> Output Will Be Length Of String 
+
+//Length --> 4
+// let UserName = "Surya";
+// console.log(UserName.length);
+
+//Trim() --> 5
+//let UserName = "Surya Is A SDE";
+// console.log(UserName.trim());  //Gives Fully Given In Input
+
+// toUpperCase() --> 6
+//let UserName = "Surya Is A SDE";
+//console.log(UserName.toUpperCase()); //Make It 
+
+// toLowerCase() --> 7
+// let UserName = "Surya Is A SDE";
+// console.log(UserName.toLowerCase());
+
+// repeat() --> 8
+// let UserName = "Surya Is A SDE";
+// console.log(UserName.repeat(3));  //Repeats Many Times The Same Input
+
+// startsWith() --> 9
+// let UserName = " Surya Is A SDE";
+// Result = UserName.startsWith(` `);
+
+// if(Result){
+//    console.log("Dont leave As White Space For UserName In Beginning...!!");
+// }else{
+//    console.log("Good...!!");
+// }
+
+// endsWith() --> 10
+// let UserName = "Surya Is A SDE!";
+// Result = UserName.endsWith(`!`);
+
+// if(Result){
+//    console.log("Dont leave As White Space For UserName In Ending...!!");
+// }else{
+//    console.log("Good...!!");
+// }
+
+// includes() --> 11
+// let UserName = "Surya Is A SDE!";
+// Result = UserName.includes(`!`);
+
+// if(Result){
+//    console.log("Your Name Cannot Have Special Characters In The String");
+// }else{
+//    console.log("Good...!!");
+// }
+
+// replaceAll() --> 12
+// let PhoneNumber = `123-456-789`;
+// PhoneNumber = PhoneNumber.replaceAll("-" , "");
+// console.log(PhoneNumber);  //Output --> 123456789
+
+// let PhoneNumber = `123-456-789`;
+// PhoneNumber = PhoneNumber.padStart(15,"0");  //Adds Four 0's at Beginning As It Size Is 15 (Size Of String + Other All 0's)
+// console.log(PhoneNumber);  //Output --> 123456789
+
+// StringSlicing --> Formula or Syntax - string.slice(start ,  end)
+// const FullName = "Surya Code";
+// let FirstName = FullName.slice(0,5);
+// let LastName = FullName.slice(6,10);  //Or slice(6)
+// console.log(FirstName);
+// console.log(LastName );
+// NegaIndex = FullName.slice(-1);
+// console.log(NegaIndex);  //e --> Coz Negative Indexing Starts From -1 From Last 
+// NegaIndex = FullName.slice(-4);
+// console.log(NegaIndex);  //Code
+
+// const FullName = "Surya Code";
+// let FirstName = FullName.slice(0,5);
+// let LastName = FullName.slice(6,10);
+// console.log(FirstName);
+// console.log(LastName );
+//             |
+//   Making Above Code as Dynamic 
+//             |
+// const FullName = "Surya Code";
+// let FirstName = FullName.slice(0,FullName.indexOf(" "));
+// let LastName = FullName.slice(FullName.indexOf(" ") + 1);
+// console.log(FirstName);
+// console.log(LastName);
 
