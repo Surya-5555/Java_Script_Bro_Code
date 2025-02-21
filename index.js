@@ -403,7 +403,7 @@ Operator Precedence
 
 // let PhoneNumber = `123-456-789`;
 // PhoneNumber = PhoneNumber.padStart(15,"0");  //Adds Four 0's at Beginning As It Size Is 15 (Size Of String + Other All 0's)
-// console.log(PhoneNumber);  //Output --> 123456789
+// console.log(PhoneNumber);  //Output --> 0000123-456-789  
 
 // StringSlicing --> Formula or Syntax - string.slice(start ,  end)
 // const FullName = "Surya Code";
@@ -430,3 +430,205 @@ Operator Precedence
 // console.log(FirstName);
 // console.log(LastName);
 
+// Method Chaining --> Calling One Method After Another In One Continuous Line Of Code
+
+//---Method Chaining--- 
+
+// let UserName = window.prompt("Enter Your Username : ");
+// UserName = UserName.trim();
+
+// let Letter = UserName.charAt(0);
+// Letter = Letter.toUpperCase();
+
+// let ExtraChars = UserName.slice(1);
+// ExtraChars = ExtraChars.toLowerCase();
+
+// let Sum = Letter + ExtraChars;
+// console.log(Sum);
+
+//---No Method Chaining--- 
+
+// let UserName = window.prompt("Enter Your Username : ");
+
+// UserName = UserName.trim().charAt(0).toUpperCase() + UserName.trim().slice(1).toLowerCase();
+// console.log(UserName);
+
+// Logical Operators
+// 1.AND - &&
+// 2.OR - ||
+// 3.NOT - ! --> Example - Valid = false 
+//                         if(!Valid)  //True And Executes
+
+// = Assignment Operator
+// == loose Comparison Opeartor (Only Values and Doesnot Consider DataType) --> Example - 3.14 == "3.14"  //True
+// === Strict Comparison Operator (Values Along With DataType)
+// != InEquality Operator
+// !== Strict InEquality Operator
+
+// "" --> Denotes Empty String 
+// " " --> Denotes Empty Index
+
+//While Loop
+// let UserName = "";
+
+// 1. while(UserName === ""){
+//    UserName = window.prompt("Enter some UserName : ")
+// }
+// console.log(UserName);  //Give Cancel --> Output - null
+
+// 2. while(UserName === "" || UserName === null){
+//    UserName = window.prompt("Enter some UserName : ")
+// }
+// console.log(UserName);  //Give Cancel --> again Pop Up Untill Entering Something , No Longer Clicking Cancel will Output null
+
+// let Bool = false;
+// let UserName ;
+// let Password ;
+
+// while(!Bool){
+//    UserName = window.prompt(`enter Your UserName :`);
+//    Password = window.prompt(`Enter Your Password : `);
+
+//    if(UserName === "MyUserName" && Password === "MyPassword"){
+//       Bool = true;
+//       console.log(`Done JS Coder...!! , You Are Logged-wIn`);
+//    }else{
+//       console.log(`Done Some Mistakes In Log-In`);
+//    }
+// }
+
+// Number Guessing Game 
+
+// const minNum = 1;
+// const maxNum = 100;
+// const Answer = Math.floor(Math.random() * (maxNum-minNum + minNum)) + minNum;
+
+// let Attempts = 0 ;
+// let Guess ;
+// let Attempt = true;
+
+// while(Attempt){
+//    Guess = window.prompt(`Guess A Number Between ${minNum} And ${maxNum}`);
+//    Guess = Number(Guess);  //When Try To convert String To Number --> NaN
+
+//    if(isNaN(Guess)){
+//       window.alert(`Enter A Valid Number`);
+//    }else if(Answer < minNum || Answer > maxNum){
+//       window.alert(`Enter A Valid Number`);
+//    }else{
+//       Attempts++;
+//       if(Guess < Answer){
+//          window.alert(`Too Low...!!`);
+//       }else if(Guess > Answer){
+//          window.alert(`Too High...!!`);
+//       }else if(Guess == Answer){
+//          window.alert(`You Got It Correct...!! , In ${Attempts} Attempts`);
+//          Attempt = false;
+//       }
+//    }
+// }
+
+// function Surya(UserName , Date){
+//    console.log(`Hi ${UserName}`);
+//    console.log(`Your Birthday Is Next Month By ${Date}`);
+// }
+
+// Surya("Surya" , 5);
+// Surya("Dharshana" , 28);
+
+// Function Scope
+
+// Example --> 
+// let x = 5;
+
+// function Example1(){
+//    let x = 10;
+//    console.log(x);
+// }
+// function Example2(){
+//    let x = 50;
+//    console.log(x);
+// }
+
+// Example1();  //10
+// Example2();  //50  //First Prefernce To Local Scope
+
+//Alt + 0 --> Keyboard ShortCuts
+
+//Temperature Conversion
+
+// const TextBox = document.getElementById("textBox");
+// const toFahrenheit = document.getElementById("toFahrenheit");
+// const toCelsius = document.getElementById("toCelsius");
+// const result = document.getElementById("result");
+// let temp;
+
+// function convert(){
+//    if(toFahrenheit.checked){
+//       temp = Number(TextBox.value);
+//       temp = temp * 9/5 + 32; 
+//       result.textContent= temp.toFixed(1) + " F";  //toFixed() To Decide How Many Numbers Should Be After Decimal Place
+//    }else if(toCelsius.checked){
+//       temp = Number(TextBox.value);
+//       temp = (temp - 32) * (5/9); 
+//       result.textContent= temp.toFixed(1) + " C";  //toFixed() To Decide How Many Numbers Should Be After Decimal Place
+//    }else{
+//       result.textContent = "Select A Unit"
+//    }
+// }
+
+//Temperature Conversion
+
+//Array
+// let fruits = ["Apple","Carrot","Banana"];  //--> 0 ,1 , 2 --> 3
+// fruits[0] = "Changed";
+// fruits[4] = "New Index";
+// console.log(fruits[0]);  //Apple
+// console.log(fruits[1]);  //Carrot
+// console.log(fruits[2]);  //Banana
+// console.log(fruits[3]);  //Undefined
+// console.log(fruits[4]);  //New Index
+
+//Push And Pop & Unshift and Shift
+// let fruits = ["Apple","Carrot","Banana"];  //--> 0 ,1 , 2 --> 3
+// fruits.push("Pushed New To End");  //Adds In Last Index
+// console.log(fruits);
+
+// fruits.pop();  //Pops Out Last Element
+// console.log(fruits);
+
+// fruits.unshift("Surya");  //Added In First Index Before All
+// console.log(fruits);
+
+// fruits.shift();  //Removes First Element
+// fruits.shift();  //Removes First Element
+// console.log(fruits);
+
+// Length Of An Array
+// let fruits = ["Apple","Carrot","Banana"];
+// console.log(fruits.length);  //3
+// console.log(fruits.indexOf("Carrot"));
+
+//Accessing with For Loops
+// let fruits = ["Apple","Carrot","Banana"];
+
+// for(let i = 0 ; i < fruits.length ; i++){
+//    console.log(fruits[i]);  //1 st Way - Normal
+// }
+
+// for(let i = fruits.length - 1 ; i >=0 ; i--){
+//    console.log(fruits[i]);  //2 nd Way - Reverse
+// }
+
+// for(let fruit of fruits){
+//    console.log(fruit);  //3 rd Way - normal & Different
+// }
+
+//Sorting Array
+// let fruits = ["Apple","Carrot","Banana"];
+// let Sorted_Array = fruits.sort();
+// console.log(Sorted_Array);
+// Sorted_Array = fruits.sort().reverse();
+// console.log(Sorted_Array);
+
+// Spread Operator --> ...

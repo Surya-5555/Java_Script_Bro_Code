@@ -72,4 +72,62 @@
 
 /* Checked Property */
 
+ /* Temperature Conversion  */
+
+/* body{
+    height:100vh;
+    width:100vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(176, 176, 214);
+}
+#Container{
+    width:500px;
+    height:500px;
+    background-color: rgb(132, 132, 188);
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 3px 3px 5px black;
+}
+h1{
+    font-weight: 400;
+    padding: 20px;
+}
+#textBox{
+    text-align: center;
+    width:300px;
+    height: 2em;
+    outline: none;
+    border-radius: 50px;
+    border: 1px solid grey;
+    margin-bottom: 30px;
+    font-size: large;
+}
+section{
+    font-size: large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#mySubmit{
+    color:brown;
+    padding: 10px;
+    width:100px;
+    margin-top: 30px;
+    border-radius: 10px;
+    outline: none;
+    background-color: bisque;
+    box-shadow: 1px 1px 2px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#result{
+    margin-top: 2em;
+}
+#mySubmit:hover{
+    background-color: rgb(192, 145, 145);
+} */
+
+  /* Temperature Conversion  */
+
 
