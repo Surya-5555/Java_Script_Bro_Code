@@ -632,3 +632,109 @@ Operator Precedence
 // console.log(Sorted_Array);
 
 // Spread Operator --> ...
+
+// let Numbers = [1 ,2 , 3 ,4 ,5];
+// let Maximum = Math.max(Numbers);
+// console.log(Maximum);  //NaN --> So
+
+// let Numbers = [1 ,2 , 3 ,4 ,5];
+// let Maximum = Math.max(...Numbers);
+// console.log(Maximum);  //5
+
+// let Numbers = [1 ,2 , 3 ,4 ,5];
+// let Maximum = Math.min(...Numbers);
+// console.log(Maximum);  //1
+
+// let UserName = "Surya";
+// console.log(UserName);  //Surya
+// console.log([UserName]);  //["Surya"]
+// let Letters = [...UserName];
+// console.log(Letters);  //["S" , "u" , "r" , "y" , "a"]
+
+// let Fruits = ["Apple" , "Banana" , "Carrot"];
+// console.log(Fruits);  //[ "Apple", "Banana", "Carrot" ]
+// console.log([Fruits]);  //Different 
+// console.log([...Fruits]);  //[ "Apple", "Banana", "Carrot" ]
+
+// Creating A Copy
+// let NewFruits = Fruits;
+// console.log(NewFruits);  //Same Copy Of Original Array
+//Instead Of Above
+// let NewFruits = [...Fruits];
+// console.log(NewFruits);  //Same Output
+
+// Combining Two Arrays 
+// let Fruits = ["Apple" , "Banana" , "Carrot"];
+// let Vegetables = ["Celery" , "Potatoes" , "Brocoli"];
+// let Foods = [...Fruits , ...Vegetables];
+// console.log(Foods);  //Array Will Be Merged --> ["Apple" , "Banana" , "Carrot" , "Celery" , "Potatoes" , "Brocoli"]
+
+// Appending In The Array
+// let Fruits = ["Apple" , "Banana" , "Carrot"];
+// let Vegetables = ["Celery" , "Potatoes" , "Brocoli"];
+// let Foods = [...Fruits , ...Vegetables , "New" , "Appended"];
+// console.log(Foods);  //[ "Apple", "Banana", "Carrot", "Celery", "Potatoes", "Brocoli", "New", "Appended" ]
+
+
+// Rest Parameters --> (...rest) - Parameter Pre-Fixed with Three Dots --> Bundles Seperate Elements As An Array i.e. Opposite To Spread Operator 
+// function Open_Fridge(Foods){
+//    console.log(Foods);
+// }
+// const Food1 = "Pizza";
+// const Food2 = "HandBurger";
+// const Food3 = "HotDog";
+// const Food4 = "Sushi";
+
+// Open_Fridge(Food1);  //Pizza
+// Open_Fridge(Food2);  //HandBurger
+// Open_Fridge(Food1 , Food2);  //Only Pizza Coz Can't Take Multiple Arguments
+
+// So -->
+// function Open_Fridge(...Foods){  //Accepts More Than One Argument
+//    console.log(Foods);
+// }
+// const Food1 = "Pizza";
+// const Food2 = "HandBurger";
+// const Food3 = "HotDog";
+// const Food4 = "Sushi";
+
+// Open_Fridge(Food1);  //Pizza
+// Open_Fridge(Food2);  //HandBurger
+// Open_Fridge(Food1 , Food2 , Food3); //  [ "Pizza", "HandBurger", "HotDog" ]
+
+// To Display As All Seperate Elements
+// function Open_Fridge(...Foods){  //Accepts More Than One Argument
+//    console.log(...Foods);
+// }
+// const Food1 = "Pizza";
+// const Food2 = "HandBurger";
+// const Food3 = "HotDog";
+// const Food4 = "Sushi";
+
+// Open_Fridge(Food1);  //Pizza
+// Open_Fridge(Food2);  //HandBurger
+// Open_Fridge(Food1 , Food2 , Food3);  //Pizza HandBurger HotDog
+
+// Calculates Sum 
+// function Sum(...Numbers){
+//    let sum = 0;
+//    for(let number of Numbers){
+//       sum +=number;
+//    }return sum;
+// }
+
+// const Store = Sum(1 , 3 , 4 , 2);
+// console.log(Store);
+
+//Calculates Average
+// function Sum(...Numbers){
+//    let sum = 0;
+//    for(let number of Numbers){
+//       sum +=number;
+//    }return sum / Numbers.length;
+// }
+
+// const Store = Sum(1 , 3 , 4 , 2 ,5);
+// console.log(Store);
+
+// Merge Multiple Strings
