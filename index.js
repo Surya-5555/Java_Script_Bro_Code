@@ -1,3 +1,8 @@
+//  VS Code Features
+//  ctrl + f To search Some Text In The Entire File Like Search In Whatsapp
+//  ctrl + i To Call Copilot
+//  ctrl + . TO Generate Code Using Copilot
+
 // console.log(`Hello`);
 // console.log(`I Like Pizza`);
 
@@ -764,4 +769,124 @@ Operator Precedence
 // }
 
 // Dice Game 
+
+
+// Random Password Generator --> Project
+
+// function generatePassword(length , includeUpperCase , includeLowerCase , includeNumbers , includeSymbols){
+//    const upperCaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+//    const lowerCaseChars = "abcdefghijklmnopqrstuvwxyz";
+//    const numberchars = "0123456789";
+//    const symbolChars = "!@#$%^&*()_+-\|/?";
+
+//    let allowedChars = "";
+//    let password = "";
+
+//    allowedChars += includeUpperCase ? upperCaseChars : "";
+//    allowedChars += includeLowerCase ? lowerCaseChars : "";
+//    allowedChars += includeNumbers ? numberchars : "";
+//    allowedChars += includeSymbols ? symbolChars : "";
+
+//    if(length <= 0){
+//       return `(Password Length Must Be Atleast One)`;
+//    }
+//    if(allowedChars.length === 0){  //Or Conditionn Can Be (allowedChars === "")
+//       return `(Atleast 1 Set Of Characters Need To Be Selected)`;  //When All False Below
+//    }
+//    for(let i = 0; i < length ; i++){
+//       const randomIndex = Math.floor(Math.random() * allowedChars.length);  //Math.random() Generates From 0 To 1
+//       password += allowedChars[randomIndex];
+//    }
+//    return password;
+// }
+
+// const passwordLength = 2;
+// const includeUpperCase = true;
+// const includeLowerCase = false;
+// const includeNumbers = false;
+// const includeSymbols = false;
+
+// const password = generatePassword(passwordLength , includeUpperCase , includeLowerCase , includeNumbers , includeSymbols);
+// console.log(`Generated Password : ${password}`);
+
+// Random Password Generator --> Project
+
+
+// Call Back --> Function Passed As An Argument To another Function
+//           Used To Handle Asynchronous Operations :  // Asynchronous Operations - Operators That Take Variable Amout Of Time
+//              1. Reading A File
+//              2. Network Requests
+//              3. Interacting With DataBases
+
+// hello(goodBye);  //Function Name Passed As An Argument
+// function hello(callback){
+//    console.log(`Hello...!!`);
+//    callback();
+// }
+// function goodBye(){
+//    console.log(`goodBye...!!`);
+// }  --> Ouput - Hello...!!
+//                goodBye...!!
+
+// Example 1:Finding Sum
+         // sum(display_sum , 3 , 2);
+         // function sum(callback , a , b){
+         //    let result = a + b;
+         //    callback(result);  //Calling Here
+         // }
+         // function display_sum(result){
+         //    console.log(result);  //Displaying Result Here
+         // }
+// Example 2:Greatest Of 3 Numbers
+         // max(display_max_value , 1 , 2 , 5);
+         // function max(callback , a , b , c){
+         //    let max_Value = Math.max(a , b, c);
+         //    callback(max_Value);  //Calling Here
+         // }
+         // function display_max_value(max_Value){
+         //    console.log(`Max Value Is : ${max_Value}`);  ////Displaying Result Here
+         // }
+
+// forEach() --> Method Used To Iterate Over The Elements Of An Array and Apply A Specified Function (callback) To Each Element
+      //   Syntax -->array.forEach(callback);
+
+      // Example 1 : To Display All Numbers
+// let numbers = [1 , 2 , 3 , 4 , 5];
+// numbers.forEach(display);
+// function display(element){
+//    console.log(element)
+// }
+
+      // Example 2 : To Display All Numbers Doubled
+// let numbers = [1 , 2 , 3 , 4 , 5];
+// numbers.forEach(Calculate);
+// numbers.forEach(display);
+// function Calculate(element , index , array){  //This Is The Format --> (element , index , array)
+//    array[index] = element * 2;
+// }
+// function display(element){
+//    console.log(element);
+// }
+
+
+// .map() --> Accepts A CallBack And Applies That Function To Each element Of An Array , Then Return A New Array
+// Similar to forEach() Method , Only Difference is Here It Returns A New Array
+
+// Example 1 :
+// const numbers = [1 , 2 , 3 , 4 , 5];
+// const squares = numbers.map(square);  //Stores In An New Array
+// console.log(squares);
+// function square(element){
+//    return Math.pow(element,2);
+// }
+
+// Example 2 :
+// const dates = ["2024/1/4" , "2025/3/5" , "2026/2/6"];  // Dates In Reverse Form 
+// const returned_new_dates = dates.map(spliting_dates);
+// console.log(returned_new_dates);
+// function spliting_dates(element){
+//    let single_element = element.split("/");  // After Splitting , Gives Index As (0 Or 1 Or 2)
+//    return `${single_element[2]}-${single_element[1]}-${single_element[0]}`;
+// }  //  Output -->  Array(3) [ "4-1-2024", "5-3-2025", "6-2-2026" ]  // Now In Proper Form 
+
 
