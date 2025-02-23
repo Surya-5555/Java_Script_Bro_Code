@@ -890,3 +890,129 @@ Operator Precedence
 // }  //  Output -->  Array(3) [ "4-1-2024", "5-3-2025", "6-2-2026" ]  // Now In Proper Form 
 
 
+// .filter()  --> Creates An New Array By Filltering Out Numbers
+
+// Example 1 --> Filtering Out Even Numbers Alone
+// let numbers = [1 , 2 , 3 , 4 , 5 , 6 , 7];
+// let Filtered_Numbers = numbers.filter(even_number);
+// console.log(Filtered_Numbers);  //Array(3) [ 2, 4, 6 ]
+// function even_number(element){
+//       return element % 2  === 0;
+// }
+
+// Example 2 --> Choosing Adults In An Mixed Array
+// const input_array = [18 , 19 , 14 ,20 , 21 , 22 , 16 , 17];
+// let adult = input_array.filter(finding_adult);
+// console.log(adult);
+// function finding_adult(element){
+//       return element>=18;
+// }
+
+
+// .reduce() --> Reduce The Elements Of An Array To A Single Value & Accumulator Will Come
+
+// Example 1 : Sum Of Elements In An Array
+// const prices = [10 , 70 , 80];
+// let sum_of_prices = prices.reduce(sum);
+// console.log(`$${sum_of_prices}`);
+// function sum(accumulator , element){  //  Accumulator First Has 1 And Stores Further Sum In It
+//       return accumulator + element;   //  Work Flow -->  0 + 10 = 10  //  10 Stored In Accumulator
+//                                       //                 10 + 70(Next Element) = 80  //  80 Stored In Accumulator
+//                                       //                 80 + 80 = 160  //160 Is Returned Coz Array Is Over
+// }
+
+// Example 2 : Largest Element In An Array
+// const grades = [75 , 86 , 83 , 100 , 91 , 69 , 99 , 1];
+// let largest_number = grades.reduce(largest_num_finder);
+// console.log(largest_number);
+// function largest_num_finder(accumulator , element){
+//       return Math.max(accumulator , element);  // 100 Coz Accumulator Compares By Starting With Initial Value Of 0 (accumulator = 0)
+// }
+
+
+// Function expression --> A Way To Define Functions As Values Or Variables
+
+// const hello = function(){  //Anonymous Function
+//       console.log(`Hellooo...!!`);
+// }
+// hello();  // Variable With Parenthesis To Invoke
+
+// Syntax For setTimeout Function --> setTimeout(callback , 3000)  //3 Seconds Or 3000 Milli Seconds
+
+// const hello = function(){  //Anonymous Function
+//       console.log(`Hellooo...!!`);
+// }
+// setTimeout(hello , 3000)  // Hellooo...!! Displayed After 3 Seconds
+
+// We Can Directly Write The Function Inside setTimeout
+// setTimeout(function(){
+//       console.log("Hellooo...!!");
+// },3000);
+
+// const numbers = [1 , 2 , 3 , 4 , 5 , 6, 7, 8];
+// let squared_values = numbers.map(function(element){
+//       return Math.pow(element , 2);
+// })
+// console.log(squared_values);  //  Array(8) [ 1, 4, 9, 16, 25, 36, 49, 64 ]
+
+// const numbers = [1 , 2 , 3 , 4 , 5 , 6 , 7 , 8];
+// let pick_even_numbers = numbers.filter(function(element){
+//       return element % 2 === 0;
+// })
+// console.log(pick_even_numbers);  //  Array(4) [ 2, 4, 6, 8 ]
+
+// const numbers = [1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 4];
+// let total = numbers.reduce(function(accumulator , element){
+//       return accumulator + element;
+// })
+// console.log(total);  //  40
+
+
+// arrow functions --> A concise Way To Write Function Expressions Good For Simple Functions That You Use Only Once (parameters)  --> Some code
+
+// Normally We Write :
+// function hello(){
+//       console.log("Hello...!!");  //  Hello...!!
+// }
+// hello();  
+
+// This Time Let Us Write little Consisely :
+// const hello = function (){
+//       console.log("Hellooo...!!");
+// }
+// hello();
+
+// Writing By Arrow Function - More Consisely:
+// Example 1 :
+// const hello = () => console.log("Hellooo...!!");
+// hello();
+
+// Example 2 :
+// const surya_arrow = () => console.log(`This Is An Arrow Fucntion`);
+// surya_arrow();
+
+// Example 3 :
+// Passing Arguments In Arrow Function
+// const name = (my_name) => console.log(`Hello Mr.${my_name}`);
+// name("Surya");
+
+// Example 4 :
+// This Is An Example With setTimeout
+// setTimeout(() => console.log(`Surya You Are Doing Well`),3000);  // Surya You Are Doing Well --> Displayed After 3 seconds
+
+// Example 5 :
+// This Is An Example Of Squaring All Element With Map Format By Arrow Function 
+// const numbers = [1 , 2 , 3 , 4 , 5 , 6];
+// const squared_array = numbers.map((elements) => Math.pow(elements , 2) );
+// console.log(squared_array);  //  Array(6) [ 1, 4, 9, 16, 25, 36 ]
+
+// Example 6 :
+// This Is An Example For Filter And Reduce Property With Arrow Function
+    // .Filter() :
+// const numbers = [1 , 2 , 3 , 4 , 5 , 6];
+// let filtered_even_numbers = numbers.filter((element) => element % 2 === 0)  // No need Return If It Is An Arrow Function
+// console.log(filtered_even_numbers);  //  Array(3) [ 2, 4, 6 ]
+    // .Reduce() :
+// const numbers = [10 , 20 , 30];
+// let total = numbers.reduce((accumulator , element) => accumulator + element);
+// console.log(total);  //  60
