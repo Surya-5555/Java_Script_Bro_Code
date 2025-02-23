@@ -130,4 +130,53 @@ section{
 
   /* Temperature Conversion  */
 
+/* Dice Game */
+
+/* body{
+    height:100vh;
+    width:100vw;
+    background-color: rgb(248, 236, 222);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#Container{
+    background-color: rgb(170, 198, 198);
+    min-width:50%;
+    min-width: 50%;
+    border-radius: 7px;
+    padding: 30px;
+    box-shadow: 3px 3px 5px;
+}
+#mySubmit{
+    padding:10px;
+    border-radius: 7px;
+    font-size:larger;
+    outline: none;
+}
+h1{
+    font-weight: 500;
+    margin-left: 30px;
+}
+label{
+    font-weight: 400;
+    margin: 10px;
+}
+#InputBox{
+    text-align: center;
+    padding:5px;
+    margin-right: 20px;
+    outline: none;
+}
+#Images img{
+    width: 50px;  
+    height: 50px;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-right: 10px;
+} */
+
+/* Dice Game */
+
 

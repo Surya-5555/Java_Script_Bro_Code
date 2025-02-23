@@ -738,3 +738,30 @@ Operator Precedence
 // console.log(Store);
 
 // Merge Multiple Strings
+// function Merge(...Strings){
+//    return Strings.join(" ");
+// }
+
+// let MergedString = Merge("Surya" , "Is" , "a" , "Sde");
+// console.log(MergedString);  //Surya Is a Sde
+
+// Dice Game 
+
+// function Roll(){
+//    const UserValue = document.getElementById("InputBox").value;
+//    const Result = document.getElementById("Result");
+//    const Images = document.getElementById("Images");
+//    const Result_Array = [];
+//    const Images_Array = [];
+
+//    for(let i = 0; i < UserValue ; i++){
+//       const Random_Number = Math.floor(Math.random()*6)+1;
+//       Result_Array.push(Random_Number);
+//       Images_Array.push(`<img src="Images/${Random_Number}.png">`)
+//    }
+//    Result.textContent = `Dice : ${Result_Array.join(" , ")}`;
+//    Images.innerHTML = Images_Array.join(" ");
+// }
+
+// Dice Game 
+
