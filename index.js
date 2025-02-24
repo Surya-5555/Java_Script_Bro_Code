@@ -1016,3 +1016,144 @@ Operator Precedence
 // const numbers = [10 , 20 , 30];
 // let total = numbers.reduce((accumulator , element) => accumulator + element);
 // console.log(total);  //  60
+
+
+// Object --> A collection Of Related Properties And / Or Methods Can Represent Real World Objects (People , Products , places)
+// object = {key : CSSMathValue,
+//     function()}
+
+// const person = {
+//     firstName : "Surya",
+//     lastName : "PR",
+//     age : 17,
+//     isEmployed : true,
+// }
+// console.log(person.firstName);
+// console.log(person.lastName);
+// console.log(person.age);
+// console.log(person.isEmployed);
+
+// const person = {
+//     name : "Surya",
+//     age : 17,
+//     isRich : "Not Yet",
+//     isStuden : true,
+//     func_call : function(){  // Or Even We Can Write () => console.log("This Function Is Called...!!")
+//         console.log("This Function Is Called...!!");
+//     },
+// }
+
+// console.log(person.name);
+// console.log(person.age);
+// console.log(person.isRich);
+// console.log(person.func_call()); --> // Surya 
+                                        // 17
+                                        // Not Yet
+                                        // This Function Is Called...!!
+
+
+// this --> Reference To The Object Where this Is Used 
+//          (The Objects Depends On THe Immediate Context)
+//          person.name = this.name
+//          Arrow Operations Cannot Be Used When this method is used
+
+// ${} --> Will Not Work In Normal Without 'This' Method , So --> See Next Example :
+// const this_var = {
+//     name : "Spongebob",
+//     favFood : "HandBurgers",
+//     age : 25,
+//     funct_call : function(){console.log(`${name} Is ${age} Years Old`);}  
+// }
+// this_var.funct_call();
+
+//Modified Above
+        //    const this_var = {
+        // name : "Spongebob",
+        // favFood : "HandBurgers",
+        // age : 25,
+        // funct_call : function(){console.log(`${this.name} Is ${this.age} Years Old`);} 
+        //     }
+        //      this_var.funct_call();
+
+// Not Be Written Like This : Arrow Function With 'This' Method
+//    const this_var = {
+//         name : "Spongebob",
+//         favFood : "HandBurgers",
+//         age : 25,
+//         funct_call : () => console.log(`${this.name} Is ${this.age} Years Old`);
+//             }
+//              this_var.funct_call();  // Error
+
+
+// Constructor --> Special Method For Defining The Properties And Methods Of Objects
+
+// function Car(make , model , year , color){
+//     this.make = make;
+//     this.model = model;
+//     this.year = year;
+//     this.color = color;
+// }
+// const car1 = new Car("Ford" , "mustang" , "2025" , "grey");
+// console.log(car1);  // Object { make: "Ford", model: "mustang", year: "2025", color: "grey" }
+// console.log(car1.make);  //  ford
+// console.log(car1.model);  //  mustang
+// console.log(car1.year);  //  2025
+// console.log(car1.color);  //  grey
+
+
+// class --> (ES6 Feature) Provides A More Structured And Cleaner Way To Work With Objects Compared To Traditional Constructor Funcitons
+// example : static keyword , encapsulation , inheritance
+
+// class product {
+//     constructor(name , age){
+//         this.name = name;
+//         this.age = age;
+//     }
+//     displayProduct(){
+//         console.log(`Name : ${this.name}`);
+//         console.log(`Age : ${this.age.toFixed(2)}`);
+//     }
+// }
+
+// const store = new product("Surya" , 17);
+
+// console.log(store);  //  Object { name: "Surya", age: 17 }
+
+// console.log(store.name);  //  Surya
+// console.log(store.age);  //  17
+
+// store.displayProduct();  //  Name : Surya 
+//                         //    Age : 17
+
+
+// static -->  Keyword That Defines Properties Or Methods That Belong To A Class Itself Rather than The Objects Created From That Class (Class owns Anything Static , Not The Objects)
+
+// Example 1 :
+// class mathUtil{
+//     static PI = 3.14;  //  Using Static Coz Of Class
+// }
+// console.log(mathUtil.PI);  //  3.14
+
+// Example 2 :
+// class Surya{
+//     static name = "Surya P R ";
+// }
+// console.log(Surya.name);  //  Surya P R 
+
+// Example 3 : 
+// class Surya{
+//     static name = "Surya P R ";
+
+//     static hello(){
+//         console.log(`Hellooo Miduu`);
+//     }
+// }
+// console.log(Surya.name);
+//  Surya.hello();  Or  //  const store = surya.hello(); --> If 'return' given There Instead Of 'Console.log'
+                        //  console.log(store);
+
+                        // const store = Surya.hello();
+                        //  console.log(store);  One And Only To Show How To Print When Return Given 
+
+// Example 4 :
+
