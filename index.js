@@ -1157,3 +1157,83 @@ Operator Precedence
 
 // Example 4 :
 
+// class User{
+
+//     static usercount = 0;
+
+//     constructor(username){
+//         this.username = username;
+//         User.usercount++;
+//     }
+//     sayHello() {  //  If We Give Static Followed By FunctionName It Can Only Be Accessed By CLassName
+//         console.log(`Hellooo ${this.username}`);
+//     }
+//     static getUserCount(){
+//         console.log(`There Are ${User.usercount} Users`);  //  It Will Be 2 After 2 Users Entered
+//     }
+// }
+
+// const user1 = new User("Surya");  // 1 Created 
+// const user2 = new User("Spongebob");  // 1 More Created  --> So 2 Available
+
+// console.log(user1);  //  Object { username: "Surya" }
+// console.log(user1.username);  //  Surya
+// console.log(user1.usercount);  //  Undefined --> Coz Usercount Is In Static Form Only Accessible To Class Name - So:
+// console.log(User.usercount);  //  2
+
+// user1.sayHello();  //  Hellooo Surya
+// user2.sayHello();  //  Hellooo Spongebob
+// User.getUserCount();  //  There Are 2 Users
+
+
+// inheritance --> Allows A New Class To Inherit Properties And Methods From An Existing Class (Parent -> Child) Helps With Cods Resuability
+
+// class Animal {  //  Parent Class
+
+//     alive = true;
+
+//     eat(){
+//         console.log(`This ${this.name} Is Eating...!!`);
+//     }
+
+//     sleep(){
+//         console.log(`This ${this.name} Is Sleeping...!!`);
+//     }
+// }
+
+// class Rabbit extends Animal{  //  Child Class Accessing Parent Class
+//     name = "Rabbit";
+//     run(){
+//         console.log(`This ${this.name} Can Run`);
+//     }
+// }
+// class Fish extends Animal{
+//     name = "Fish";
+// }
+// class Hawk extends Animal{
+//     name = "Hawk";
+// }
+
+// const rabbit = new Rabbit();  //  Class Constructor Must Be Invoked With New 
+// console.log(rabbit.alive);  //  True 
+// console.log(rabbit);  //  Object { alive: true, name: "Rabbit" }
+
+// const fish = new Fish();
+// console.log(fish.alive);  //  True
+// console.log(fish);  //  Object { alive: true, name: "Fish" }
+
+// const hawk = new Hawk();
+// console.log(hawk.alive);  //  True
+// console.log(hawk);  //  Object { alive: true, name: "Hawk" }
+
+// rabbit.eat();  //  This Rabbit Is Eating...!!
+// rabbit.sleep();  //  This Rabbit Is Sleeping...!!
+
+// rabbit.run();  //  This Rabbit Can Run
+
+
+// Super --> Keyword Is Used In Classes To Call The Constructor Or 
+//           Access The Properties And Methods Of A Parent (SuperClass) 
+//           this --> this object 
+//           super --> the parent Of That Object - (Similar To 'this' Keyword But Refers To Parent)
+
