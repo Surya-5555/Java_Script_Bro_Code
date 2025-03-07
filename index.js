@@ -1237,3 +1237,330 @@ Operator Precedence
 //           this --> this object 
 //           super --> the parent Of That Object - (Similar To 'this' Keyword But Refers To Parent)
 
+// class Animal{
+//     constructor(name , age){
+//         this.name = name;
+//         this.age = age;  //  As It is Common Written In Parent Class
+//     }
+
+//     move(speed){
+//         console.log(`This ${this.name} Moves At A Speed Of ${speed}mph`);
+//     }
+// }
+// class Rabbit extends Animal{
+//     constructor(name , age , runSpeed){
+//         super(name , age );
+//         // this.name = name;
+//         // this.age = age;
+//         this.runSpeed = runSpeed;
+
+//     }
+//     run(){
+//         console.log(`This ${this.name} Can run`);
+//         super.move(this.runSpeed);
+//     }
+// }class Fish extends Animal{
+//     constructor(name , age , swimSpeed){
+//         super(name , age );
+//         // this.name = name;
+//         // this.age = age;
+//         this.swimSpeed = swimSpeed;
+//     }
+//     swim(){
+//         console.log(`This ${this.name} Can Swim`);
+//         super.move(this.swimSpeed);
+//     }
+// }class Hawk extends Animal{
+//     constructor(name , age , flySpeed){
+//         super(name , age );  //  Rectifies Error - So Given In Sub Class  //  Helps In Code Reusability
+//         // this.name = name;
+//         // this.age = age;
+//         this.flySpeed = flySpeed;
+//     }fly(){
+//         console.log(`This ${this.name} Can fly`);
+//         super.move(this.flySpeed);
+//     }
+
+// }
+// const rabbit = new Rabbit("rabbit" , 1 , 25);
+// const fish = new Fish("fish" , 2 , 12);
+// const hawk = new Hawk("hawk" , 3 , 50);  //  Uncaught ReferenceError: must call super constructor before using 'this' in derived class constructor 
+//                                          //  If We Leave It Without Super Keyword
+
+// console.log(fish.swimSpeed);  //  12
+// console.log(fish.name);  //  fish
+// console.log(fish.runSpeed);  //  Undefined
+
+// hawk.fly();  //  This hawk Can fly  
+//              //  This hawk Moves At A Speed Of 50mph
+
+
+//  getter --> Special Method That Makes A Property Readable
+//  setter --> Special Method That Makes A Property writeable
+
+//  Validate And Modify A Value When Reading / Writing A Property
+
+// class Rectangle{
+//     constructor(width , height){
+//         this.width = width;
+//         this.height = height;
+//     }
+// }
+
+// const rectangle = new Rectangle(-1000000 , "Pizza");
+
+// console.log(rectangle.width);  //  -1000000
+// console.log(rectangle.height);  //  Pizza  
+//                                 //  To Avoid This --->  
+
+// class Rectangle{
+//     constructor(width , height){
+//         this.width = width;
+//         this.height = height;
+//     }
+//     set width(newWidth){
+//         if(newWidth > 0){
+//             this._width = newWidth;
+//         }else{
+//             console.log(`Error , Must Be A Positive Number`);  //  Or console.error  //
+//         }
+//     }
+//     set height(newheight){
+//         if(newheight > 0){
+//             this._height = newheight;
+//         }else{
+//             console.log(`Error , Must Be A Positive Number`);
+//         }
+//     }
+// }
+
+// const rectangle = new Rectangle(-1000000 , "Pizza");
+
+// console.log(rectangle.width);  //  Error , Must Be A Positive Number
+// console.log(rectangle.height);  //  Error , Must Be A Positive Number
+
+//  Even If We Rectify By Giving Positive Values --> Output Still  Undefined
+//  Here Comes The 'Get' Method
+
+// class Rectangle{
+//     constructor(width , height){
+//         this.width = width;
+//         this.height = height;
+//     }
+//     set width(newWidth){
+//         if(newWidth > 0){
+//             this._width = newWidth;
+//         }else{
+//             console.log(`Error , Must Be A Positive Number`);
+//         }
+//     }
+//     set height(newheight){
+//         if(newheight > 0){
+//             this._height = newheight;
+//         }else{
+//             console.log(`Error , Must Be A Positive Number`);
+//         }
+//     }
+//     get width(){
+//         return `${this._width} cm`;
+//     }
+//     get height(){
+//         return `${this._height} cm`;
+//     }
+//     get area(){
+//         return `${this._width * this._height} cm`;
+//     }
+// }
+
+// const rectangle = new Rectangle(5 , 3);
+
+// console.log(rectangle.width);  //  5 cm
+// console.log(rectangle.height);  //  3 cm
+// console.log(rectangle.area)  //  15 cm  --> Can Access As It Is In Getter
+
+// class Name {
+//     constructor(firstName , lastName , age){
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+//         this.age = age;
+//     }
+// }
+// const name = new Name(69 , 96 , "Surya")
+// console.log(name.firstName);  //  69 --> Shouldnot Come , So -->
+
+// class Name {
+//     constructor(firstName , lastName , age){
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+//         this.age = age;
+//     }
+//     set firstName(newfirstName){
+//         if(typeof newfirstName ==="string" && newfirstName.length > 0)
+//             {
+//                 this._firstName = newfirstName;
+//             }else{
+//                 console.error("Only In String And Length Must Be above 0")
+//             }
+//     }
+//     set lastName(newLastName){
+//         if(typeof newLastName ==="string" && newLastName.length > 0)
+//             {
+//                 this._lastName = newLastName;
+//             }else{
+//                 console.error("Only In String And Length Must Be above 0")
+//             }
+//     }
+//     set age(newAge){
+//         if(typeof newAge ==="number" && newAge > 0)
+//             {
+//                 this._age = newAge;
+//             }else{
+//                 console.error("Only In number And Number Must Be above 0")
+//             }
+//     }
+//     get firstName(){
+//         return this._firstName;
+//     }
+//     get lastName(){
+//         return this._lastName;
+//     }
+//     get age(){
+//         return this._age;
+//     }
+//     get combined(){
+//         return `${name.firstName} ${name.lastName}`;
+//     }
+
+// }
+// const name = new Name("Surya" , "PR" , 17)
+// console.log(name.firstName);
+// console.log(name.lastName);
+// console.log(name.combined);
+// console.log(name.age); 
+
+// Destructuring  -->  Extract Values From Arrays And Objects , Then assign Them To Variables In A Convinient Way
+//                     []  -->  To Perform Array Destructuring
+//                     {}  -->  To Perform Object Destructuring
+
+// Example 1 :
+// swap The Value Of Two Variables
+
+// let a = 1;
+// let b = 2;
+// [a,b] = [b,a];
+// console.log(a);  // 2
+// console.log(b);  // 1
+
+// Example 2 :
+
+// let array_input = ["Red" , "Blue" , "Green"];
+// [array_input[0] , array_input[2]] = [array_input[2] , array_input[0]];
+// console.log(array_input);  //  Array(3) [ "Green", "Blue", "Red" ]
+
+// Example 3 :
+// const colors = ["Red" , "Blue" , "Green" , "White" , "Black"];
+// const[firstcolor , secondcolor , thirdcolor , ...extracolors] = colors;
+// console.log(firstcolor);  //  Red
+// console.log(secondcolor);  //  Blue
+// console.log(thirdcolor);  //  Green
+// console.log(extracolors);  //  Array [ "White", "Black" ]
+
+
+// {}  -->  To Perform Object Destructuring
+// Example 1 :
+// const person = {
+//     firstname : "Surya",
+//     lastname : "P R",
+//     age : 17,
+// }
+// const{firstname , lastname , age} = person;
+// console.log(firstname);
+
+// Example 2 :
+// With Functions
+// function display({firstname , lastname , age}){
+//     return `Firstname : ${firstname}`;
+// }
+// const person = {
+//     firstname : "Surya",
+//     lastname : "P R",
+//     age : 17,
+// }
+// let result = display(person);
+// console.log(result);
+
+// forEach Method
+// const person = 
+//         [{firstname : "Surya" , lastname : "P R"},
+//         {firstname : "chand" , lastname : "P R"}]
+
+// person.forEach(names => console.log(names.firstname));  //  Surya 
+                                                           //  chand
+// .reduce() Method                                                          
+// const fruits = [{name : "Pineapple" , color : "Yellow" , calories : "125"},  //  Initially chosen In Max
+//                 {name : "Grapes" , color : "Green" , calories : "71"},
+//                 {name : "Apple" , color : "Red" , calories : "72"}]
+  
+// const lesscalories = fruits.reduce((max , fruit) => Number(fruit.calories) > Number(max.calories) ? fruit : max);            
+// console.log(lesscalories);  //  Object { name: "Pineapple", color: "Yellow", calories: "125" }
+
+
+// sort()
+// let num = [ 1 , 2 , 9 , 4, 5];
+// num.sort();
+// console.log(num);  //  [ 1, 2, 4, 5, 9 ]
+
+// we can also pass (a,b) as parameters and use arrowfunction to compare consecutive and sort
+// (a , b) => a - b for ascending 
+// (a , b) => b - a for reverse
+//  .localcompare() --> to compare strings
+
+
+//  Date objects
+// const date_today = new Date();
+// console.log(date_today);  //  Date Fri Mar 07 2025 05:56:45 GMT+0530 (India Standard Time)
+// to give parameters this is the format --> Date(year , month , day , hour , minute , second, ms) to change and have our own
+
+
+// closure --> funtion defined inside another function for state maintainance 
+// function outer(){
+//     let message = "Hello Surya";
+//     function inner(){
+//         console.log(message);
+//     }
+//     inner();
+// }
+// outer();  //  Hello Surya
+
+// function outer(){
+//     let score = 0;
+//     function first(points){
+//         score += points;
+//         console.log(`+ ${points}pts`);
+//     }
+//     function second(points){
+//         score -= points;
+//         console.log(`- ${points}pts`);
+//     }
+//     function toreturn(){
+//         return score;
+//     }
+//     return {first , second , toreturn};
+// } 
+
+// const display = outer();
+// display.first(5);  // + 5pts
+// display.second(6);  //  - 6pts
+// const result = display.toreturn();
+// console.log(result);  //  -1
+
+
+// settimeout function
+// syntax --> setTimeout(callback , delay);
+
+// const stop = setTimeout(() => window.alert("Hello Surya") , 3000);
+// clearTimeout(stop);  //  clears and stops 
+
+//  to practise with settimeout and cleartimeout , create two button in html start and clear click start and wait few seconds less than the timout you gave and click clear to show how it works
+
+
