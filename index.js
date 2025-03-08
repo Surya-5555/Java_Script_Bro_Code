@@ -1563,4 +1563,71 @@ Operator Precedence
 
 //  to practise with settimeout and cleartimeout , create two button in html start and clear click start and wait few seconds less than the timout you gave and click clear to show how it works
 
+                                                                                                   
 
+// real life clock
+// function updateclock(){
+//     const now = new Date();
+//     const hours = now.getHours().toString().padStart(2 , 0);
+//     const meridiem = hours >= 12 ? "PM" : "AM";
+//     const minutes = now.getMinutes().toString().padStart(2, 0);
+//     const seconds = now.getSeconds().toString().padStart(2 , 0);
+//     const timestring = `${hours}:${minutes}:${seconds} ${meridiem}`;
+//     document.getElementById("clock").textContent=timestring;
+// }
+
+// updateclock();
+// setInterval(updateclock , 1000);
+
+
+// const display = document.getElementById("display");
+// let timer = null;
+// let starttime = 0;
+// let elapsedtime = 0;  //  elapsedtime helps track how much time has already passed
+// let isrunning = false;
+
+// function start(){
+//     if(!isrunning){
+//         starttime = Date.now() - elapsedtime;
+//         timer = setInterval(update , 10);
+//         isrunning = true;
+//     }
+// }
+// function stop(){
+//     if(isrunning){
+//         clearInterval(timer);
+//         elapsedtime = Date.now() - starttime;
+//         isrunning = false;
+//     }
+// }
+
+// function reset(){
+//     clearInterval(timer);
+//     let starttime = 0;
+//     let elapsedtime = 0;
+//     let isrunning = false;
+//     display.textContent = "00:00:00:00";
+// }
+
+// function update(){
+//     const currenttime = Date.now();
+//     elapsedtime = currenttime - starttime;
+
+//     hours = Math.floor(elapsedtime / (1000 * 60 * 60));
+//     minutes = Math.floor(elapsedtime / (1000 * 60) % 60);
+//     seconds = Math.floor(elapsedtime / 1000 % 60);
+//     milliseconds = Math.floor(elapsedtime % 1000 / 10);
+
+//     hours = String(hours).padStart(2 , "0");
+//     minutes = String(minutes).padStart(2 , "0");
+//     seconds = String(seconds).padStart(2 , "0");
+//     milliseconds = String(milliseconds).padStart(2 , "0");
+
+//     display.textContent =  `${hours}:${minutes}:${seconds}:${milliseconds}`;
+// }
+
+ 
+// ES6 Module
+import {PI , getcircumference , getarea , getvolume} from './mathutil.js'
+
+console.log(PI);
