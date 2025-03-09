@@ -1627,7 +1627,167 @@ Operator Precedence
 // }
 
  
-// ES6 Module
-import {PI , getcircumference , getarea , getvolume} from './mathutil.js'
+// ES6 Module --> can access external file code
+// import {PI , getcircumference , getarea , getvolume} from './mathutil.js'
 
-console.log(PI);
+// console.log(PI);
+
+
+// synchronous --> executes line by line - normal
+// example --> 
+// console.log("Tast 1");
+// console.log("Tast 2");
+// console.log("Tast 3");
+
+// asynchronous
+// function func1(callback){
+//     setTimeout(() => {console.log("Task 1");
+//                       callback()},3000);
+// }
+
+// function func2(){
+//     console.log("Tast 2");
+//     console.log("Tast 3");
+//     console.log("Tast 4");
+// }
+
+// func1(func2);
+
+
+// error handling
+// 1. try{}
+// 2. catch{}
+// 3. finally{}
+
+// try{
+//     console.log(x);
+// }
+// catch(error){
+//     console.error(error);  //  ReferenceError: x is not defined
+// }
+// console.log("Reached The End");
+
+// try{
+//     console.lag(`Lag Is The Error`);
+// }
+// catch(error){
+//     console.error(`You Have An Error`);
+// }
+// finally{
+//     console.log(`Executed Anyways`)
+// }
+
+
+
+// Mobile Calculator
+
+// const display = document.getElementById("display");
+
+// function appendtodisplay(input){
+//     display.value += input;
+// }
+
+// function cleardisplay(){
+//     display.value = "";
+// }
+
+// function calculate(){
+//     try{
+//     display.value = eval(display.value)  // eval is a built-in function --> here it evaluates the "display.value"
+//     }
+//     catch(error){
+//         display.value = "Error";
+//     }
+// }
+
+
+// DOM - Document object model
+
+// console.log(document);  // Shows Html document
+
+// document.title = "My Web"; 
+// document.body.style.backgroundColor = "hsl( 0 , 0% , 15%)";
+// console.log(document); 
+
+
+// element selectors 
+                                    //  Returns
+// 1. document.getElementById()  //  Element or NULL 
+// 2. document.getElementsByClassName()  //  HTML Collection  //  HTML Collection dont have forEach method
+// 3. document.getElementsByTagName()  //  HTML collection
+// 4. document.querySelector()  //  Element or NULL
+// 5. document.querySelectorAll()  //  NODELIST(has Built-in forEach Method) --> similar to "HTML collection" but the diff is forEach
+
+// 2. and 3. If we want to use .forEach() method then we should typecast first and then use it  
+// --->
+// const fruits = document.getElementsByClassName("Cls-name");
+
+// fruits.forEach() //  Uncaught TypeError: fruits.forEach is not a function
+
+// Sooo,
+// const fruits = document.getElementsByClassName("cls-name");
+
+// Array.from(fruits).forEach(fruit => {
+//     fruit.style.backgroundColor = "yellow";
+// });
+
+/* <ul>
+    <li>Surya</li>
+    <li>Js</li>
+    <li>Css</li>
+  </ul>
+
+  <ul>
+    <li>Midu</li>
+    <li>Html</li>
+    <li>React</li>
+  </ul> */
+// const names = document.querySelectorAll("li");
+// names[5].style.backgroundColor = "Green";  //  React Gets Green Color
+
+// const names = document.querySelectorAll("li");
+// names.forEach(name => {
+//     name.style.backgroundColor = "Lavender";
+// });  //  Gives Color For All li Tags
+
+
+// Dom Navigation
+
+// 1. .firstElementChild
+// 2. .lastElementChild
+// 3. .nextElementSibling
+// 4. .previousElementSibling
+// 5. .parentElement
+// 6. .children  --> Has HTML collection
+
+
+// Add And Change HTML In JS
+
+// step-1 : Create The Element
+// const newh1 = document.createElement("h1");
+
+// step-2 : Add Attributes / Properties
+// newh1.textContent = "I Like Pizza...!!";
+// newh1.id = "myh1";
+// newh1.style.color = "tomato";
+// newh1.style.textAlign = "center";
+// step-3 : Append Element To Dom 
+
+// document.body.prepend(newh1);  //  Or Use Append To Have The Content In Last After All Boxes
+
+// document.getElementById("box1").append(newh1);
+
+// const box2 = document.getElementById("box2");
+// document.body.insertBefore(newh1 , box2);  //  .insertBefore(newElement , currentElement) --> syntax
+
+// const boxes = document.querySelectorAll(".box");
+// document.body.insertBefore(newh1 , boxes[3]);
+
+// Remove HTML Element 
+
+// document.body.removeChild(newh1);
+
+// If it is inside the box and not inside the body we should use --> document.body.removeChild(newh1); as --> document.getElementById("box1").removeChild(newh1);
+
+ 
+
